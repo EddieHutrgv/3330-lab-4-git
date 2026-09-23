@@ -2,7 +2,7 @@ $(function() {
   
   // TODO: Create a list of JS Object each representing a game. 
   // Use the data contained in the <ul> to build this list of game titles.
-const game = [
+ const games = [
    {
     "title": "The Legend of Zelda: Breath of the Wild",
    },
@@ -15,10 +15,10 @@ const game = [
     {
     "title": "Minecraft",
    },
-    {
+   {
     "title": "Super Mario Odyssey",
    },
-]
+ ]
 
   var gameList, newItemForm, newItemButton;
   var item = '';                                 
@@ -34,11 +34,12 @@ const game = [
   // inject the new node inside the <ul>.
 
 function loadGames(){
-  gameList.forEach(game => {
+  games.forEach(game => {
   const listItem =$("<li>");
   listItem.html(`${game.title}`);
   gameList.append(listItem);
-})
+});
+}
 
 loadGames();
 
